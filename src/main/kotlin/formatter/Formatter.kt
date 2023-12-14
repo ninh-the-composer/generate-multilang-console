@@ -36,7 +36,7 @@ object Formatter {
         return supportedLanguages.map { language ->
             val locale = if (language != Language.EN) "-${language.locale}" else ""
             val resourceLines = FileUtils.readFile(
-                filePath = "./${FormatType.Android.directory}/current/value$locale/${FormatType.Android.fileName}"
+                filePath = "${FormatType.Android.directory}/current/value$locale/${FormatType.Android.fileName}"
             )
             ExistedResources(
                 language = language,

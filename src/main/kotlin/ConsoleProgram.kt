@@ -79,7 +79,7 @@ object ConsoleProgram {
             }
             val folderName = "output/${_timeCreated}"
             FileUtils.createFile(
-                filePath = "./${FormatType.Android.directory}/$folderName/value$locale/${FormatType.Android.fileName}",
+                filePath = "${FormatType.Android.directory}/$folderName/value$locale/${FormatType.Android.fileName}",
                 content = fileContent
             )
         }
@@ -92,7 +92,7 @@ object ConsoleProgram {
             val locale = if (resource.language != Language.EN) "-${resource.language.locale}" else ""
             val folderName = "output/${_timeCreated}"
             FileUtils.createFile(
-                filePath = "./${FormatType.Android.directory}/$folderName/value$locale/${FormatType.Android.fileName}",
+                filePath = "${FormatType.Android.directory}/$folderName/value$locale/${FormatType.Android.fileName}",
                 content = fileContent
             )
         }
@@ -108,7 +108,7 @@ object ConsoleProgram {
 
     private fun askMethod(type: FormatType) {
         println("> Do you want to append to current string resources of your project?")
-        println("Your current multi languages should be in ./${type.directory}/current directory")
+        println("Your current multi languages should be in ${type.directory}/current directory")
         println("1. Yes")
         println("2. No")
         println("Q. Exit")
@@ -118,6 +118,6 @@ object ConsoleProgram {
     private fun noticeFinishJob(type: FormatType) {
         val folderName = "output/${_timeCreated}"
         println("Done!")
-        println("Your output appear in folder ./${type.directory}/$folderName")
+        println("Your output appear in folder ${type.directory}/$folderName")
     }
 }
