@@ -116,7 +116,7 @@ object ConsoleProgram {
     }
 
     private fun noticeFinishJob(type: FormatType) {
-        val folderName = "output_${_timeCreated}"
+        val folderName = "output/${_timeCreated}"
         println("Done!")
         println("Your output appear in folder ./${type.directory}/$folderName")
     }
